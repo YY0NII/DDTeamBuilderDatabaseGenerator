@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DarkestDungeonCharacterStatsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Units">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name Of Class" Type="text" />
+          <Property Name="Resolve Level" Type="int" />
+          <Property Name="Max HP" Type="int" />
+          <Property Name="Dodge Percentage" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Protect" Type="int" />
+          <Property Name="Speed" Type="int" />
+          <Property Name="Accuracy Modifier" Type="int" />
+          <Property Name="Critical Chance Percentage" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Damage Minimum" Type="int" />
+          <Property Name="Damage Maximum" Type="int" />
+          <Property Name="Stun Resistance" Type="int" />
+          <Property Name="Move Resistance" Type="int" />
+          <Property Name="Blight Resistance" Type="int" />
+          <Property Name="Bleed Resistance" Type="int" />
+          <Property Name="Debuff Resistance" Type="int" />
+          <Property Name="Trap Disarm Chance" Type="int" />
+          <Property Name="Disease Resistance" Type="int" />
+          <Property Name="Deathblow Resistance" Type="int" />
+          <Property Name="Movement Forward" Type="int" />
+          <Property Name="Movement Backwards" Type="int" />
+          <Property Name="Religious" Type="text" />
+          <Property Name="Provisions" Type="text" />
+        </EntityType>
+        <EntityContainer Name="DarkestDungeonCharacterStatsDBModelStoreContainer">
+          <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DarkestDungeonCharacterStatsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Unit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Of_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resolve_Level" Type="Int32" />
+          <Property Name="Max_HP" Type="Int32" />
+          <Property Name="Dodge_Percentage" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Protect" Type="Int32" />
+          <Property Name="Speed" Type="Int32" />
+          <Property Name="Accuracy_Modifier" Type="Int32" />
+          <Property Name="Critical_Chance_Percentage" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Damage_Minimum" Type="Int32" />
+          <Property Name="Damage_Maximum" Type="Int32" />
+          <Property Name="Stun_Resistance" Type="Int32" />
+          <Property Name="Move_Resistance" Type="Int32" />
+          <Property Name="Blight_Resistance" Type="Int32" />
+          <Property Name="Bleed_Resistance" Type="Int32" />
+          <Property Name="Debuff_Resistance" Type="Int32" />
+          <Property Name="Trap_Disarm_Chance" Type="Int32" />
+          <Property Name="Disease_Resistance" Type="Int32" />
+          <Property Name="Deathblow_Resistance" Type="Int32" />
+          <Property Name="Movement_Forward" Type="Int32" />
+          <Property Name="Movement_Backwards" Type="Int32" />
+          <Property Name="Religious" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Provisions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DarkestDungeonCharacterStatsDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Units" EntityType="Self.Unit" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DarkestDungeonCharacterStatsDBModelStoreContainer" CdmEntityContainer="DarkestDungeonCharacterStatsDBEntities">
+          <EntitySetMapping Name="Units">
+            <EntityTypeMapping TypeName="DarkestDungeonCharacterStatsDBModel.Unit">
+              <MappingFragment StoreEntitySet="Units">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name_Of_Class" ColumnName="Name Of Class" />
+                <ScalarProperty Name="Resolve_Level" ColumnName="Resolve Level" />
+                <ScalarProperty Name="Max_HP" ColumnName="Max HP" />
+                <ScalarProperty Name="Dodge_Percentage" ColumnName="Dodge Percentage" />
+                <ScalarProperty Name="Protect" ColumnName="Protect" />
+                <ScalarProperty Name="Speed" ColumnName="Speed" />
+                <ScalarProperty Name="Accuracy_Modifier" ColumnName="Accuracy Modifier" />
+                <ScalarProperty Name="Critical_Chance_Percentage" ColumnName="Critical Chance Percentage" />
+                <ScalarProperty Name="Damage_Minimum" ColumnName="Damage Minimum" />
+                <ScalarProperty Name="Damage_Maximum" ColumnName="Damage Maximum" />
+                <ScalarProperty Name="Stun_Resistance" ColumnName="Stun Resistance" />
+                <ScalarProperty Name="Move_Resistance" ColumnName="Move Resistance" />
+                <ScalarProperty Name="Blight_Resistance" ColumnName="Blight Resistance" />
+                <ScalarProperty Name="Bleed_Resistance" ColumnName="Bleed Resistance" />
+                <ScalarProperty Name="Debuff_Resistance" ColumnName="Debuff Resistance" />
+                <ScalarProperty Name="Trap_Disarm_Chance" ColumnName="Trap Disarm Chance" />
+                <ScalarProperty Name="Disease_Resistance" ColumnName="Disease Resistance" />
+                <ScalarProperty Name="Deathblow_Resistance" ColumnName="Deathblow Resistance" />
+                <ScalarProperty Name="Movement_Forward" ColumnName="Movement Forward" />
+                <ScalarProperty Name="Movement_Backwards" ColumnName="Movement Backwards" />
+                <ScalarProperty Name="Religious" ColumnName="Religious" />
+                <ScalarProperty Name="Provisions" ColumnName="Provisions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
